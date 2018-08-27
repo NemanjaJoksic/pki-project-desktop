@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="550.0" prefWidth="1100.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rs.ac.bg.etf.pkiproject.controller.CommentController">
+    <top>
+        <AnchorPane prefHeight="97.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="imageView" fitHeight="89.0" fitWidth="108.0" layoutX="5.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                </ImageView>
+                <Label fx:id="nameLabel" layoutX="131.0" layoutY="30.0" text="Restoran Sumadija">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <bottom>
+        <AnchorPane prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+            <children>
+                <TextArea fx:id="comment" layoutX="5.0" layoutY="5.0" prefHeight="85.0" prefWidth="1090.0" />
+                <Button layoutX="906.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="190.0" text="Posalji" onAction="#sendComment" />
+            </children>
+        </AnchorPane>
+    </bottom>
+    <center>
+        <ScrollPane prefHeight="200.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="5.0" right="5.0" />
+            </BorderPane.margin>
+         <content>
+            <VBox fx:id="comments" prefHeight="332.0" prefWidth="1069.0" style="-fx-background-color: transparent;">
+               <children>
+               </children>
+            </VBox>
+         </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

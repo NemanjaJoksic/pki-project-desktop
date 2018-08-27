@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane prefHeight="550.0" prefWidth="1100.0">
+    <content>
+        <VBox fx:id="orderedFoodPane" layoutX="180.0" prefHeight="550.0" prefWidth="1100.0" spacing="8.0" style="-fx-background-color: transparent;">
+            <children>
+            </children>
+        </VBox>
+    </content>
+</ScrollPane>

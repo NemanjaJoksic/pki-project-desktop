@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<BorderPane prefHeight="550.0" prefWidth="1100.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rs.ac.bg.etf.pkiproject.controller.FoodController">
+    <left>
+        <VBox alignment="TOP_RIGHT" prefHeight="550.0" prefWidth="170.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="10.0" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Naziv:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="namePattern" layoutX="10.0" />
+                <Label layoutX="10.0" prefHeight="35.0" prefWidth="170.0" text="Vrsta kuhinje:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="kitchenType" value="" layoutX="10.0" prefWidth="170.0" style="-fx-background-color: white;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="" />
+                            <String fx:value="Tradicionalna" />
+                            <String fx:value="Italijanska" />
+                            <String fx:value="Azijska" />
+                            <String fx:value="Mesovita" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label prefHeight="35.0" prefWidth="170.0" text="Sastojci:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            <FlowPane fx:id="ingredientsCheckBoxGroup" prefWidth="200.0" />
+                <Button id="searchRestaurantsButton" mnemonicParsing="false" prefHeight="15.0" prefWidth="95.0" text="Pretrazi" onAction="#searchFood">
+                    <VBox.margin>
+                        <Insets top="3.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <ScrollPane prefHeight="550.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+            <content>
+                <VBox fx:id="foodPane" layoutX="180.0" prefHeight="550.0" prefWidth="915.0" spacing="8.0" style="-fx-background-color: transparent;">
+                    <children>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

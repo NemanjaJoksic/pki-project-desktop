@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="600.0" prefWidth="1100.0" fx:controller="rs.ac.bg.etf.pkiproject.controller.HistoryController" style="-fx-background-image: url('file:resources/background.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <fx:include fx:id="header" source="headerUser.fxml" />
+        <ScrollPane prefHeight="545.0" prefWidth="1100.0">
+            <content>
+                <VBox fx:id="ordersPane" prefHeight="543.0" prefWidth="1095.0" spacing="20.0">
+                    <children>
+                    </children>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</VBox>

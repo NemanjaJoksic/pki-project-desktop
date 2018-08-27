@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<BorderPane prefHeight="550.0" prefWidth="1100.0" style="-fx-background-color: transparent;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="rs.ac.bg.etf.pkiproject.controller.RestaurantController">
+    <left>
+        <VBox alignment="TOP_RIGHT" prefHeight="550.0" prefWidth="170.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="10.0" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Naziv:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="namePattern" layoutX="10.0" />
+                <Label layoutX="10.0" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Lokacija:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="restaurantLocation" value="" layoutX="10.0" prefWidth="170.0" style="-fx-background-color: white;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="" />
+                            <String fx:value="Vracar" />
+                            <String fx:value="Zvezdara" />
+                            <String fx:value="Novi Beograd" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label layoutX="10.0" prefHeight="35.0" prefWidth="170.0" text="Vrsta kuhinje:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="kitchenType" value="" layoutX="10.0" prefWidth="170.0" style="-fx-background-color: white;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="" />
+                            <String fx:value="Tradicionalna" />
+                            <String fx:value="Italijanska" />
+                            <String fx:value="Azijska" />
+                            <String fx:value="Mesovita" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label prefHeight="35.0" prefWidth="170.0" text="Ocena:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <AnchorPane prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;">
+                    <children>
+                        <Label layoutX="7.0" layoutY="9.0" style="-fx-background-color: transparent;" text="Od:">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="minRaiting" layoutX="29.0" layoutY="5.0" prefHeight="25.0" prefWidth="45.0" />
+                        <Label layoutX="85.0" layoutY="7.0" text="Do:">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="maxRaiting" layoutX="107.0" layoutY="5.0" prefHeight="25.0" prefWidth="45.0" />
+                    </children>
+                </AnchorPane>
+                <Label prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Nacin placanja:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox prefWidth="170.0" style="-fx-background-color: white;" value="">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Gotovinsko placanje" />
+                            <String fx:value="Placanje karticom" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Button id="searchRestaurantsButton" mnemonicParsing="false" onAction="#searchRestaurants" prefHeight="15.0" prefWidth="95.0" text="Pretrazi">
+                    <VBox.margin>
+                        <Insets top="3.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <ScrollPane prefHeight="550.0" prefWidth="915.0" BorderPane.alignment="CENTER">
+            <content>
+                <VBox fx:id="restaurantsPane" layoutX="180.0" prefHeight="550.0" prefWidth="915.0" spacing="8.0" style="-fx-background-color: transparent;">
+                    <children>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

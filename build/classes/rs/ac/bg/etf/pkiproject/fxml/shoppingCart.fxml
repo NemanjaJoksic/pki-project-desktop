@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="shoppingCartPane" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-image: url('file:resources/background.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <fx:include source="headerUser.fxml" fx:id="header"/>
+        <fx:include source="shoppingCartContent.fxml" fx:id="shoppingCart"/>
+    </children>
+</VBox>

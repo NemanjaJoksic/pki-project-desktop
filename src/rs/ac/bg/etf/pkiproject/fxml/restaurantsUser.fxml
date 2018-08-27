@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<VBox fx:id="main" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-image: url('file:resources/background.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <fx:include source="headerUser.fxml" fx:id="header"/>
+        <fx:include source="restaurantsContent.fxml" fx:id="info"/>
+    </children>
+</VBox>

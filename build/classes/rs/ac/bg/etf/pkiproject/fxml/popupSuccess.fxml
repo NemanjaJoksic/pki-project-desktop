@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="popupNotification" prefHeight="140.0" prefWidth="257.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rs.ac.bg.etf.pkiproject.controller.PopupNotificationController">  
+    <center>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="110.0" prefWidth="235.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="file:resources/success.png" />
+                    </image>
+                    <FlowPane.margin>
+                        <Insets right="5.0" />
+                    </FlowPane.margin>
+                </ImageView>
+                <Label prefHeight="93.0" prefWidth="146.0" text="Successful registration" wrapText="true" />
+            </children>
+        </FlowPane>
+    </center>
+    <bottom>
+        <Button mnemonicParsing="false" onAction="#okPressed" prefHeight="25.0" prefWidth="86.0" text="OK" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="5.0" />
+            </BorderPane.margin>
+        </Button>
+    </bottom>
+</BorderPane>

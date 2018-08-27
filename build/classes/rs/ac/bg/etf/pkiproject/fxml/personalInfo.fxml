@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<VBox prefHeight="600.0" prefWidth="1100.0" style="-fx-background-image: url('file:resources/background.jpg');" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="rs.ac.bg.etf.pkiproject.controller.UserController">
+    <children>
+        <fx:include fx:id="header" source="headerUser.fxml" />
+        <AnchorPane prefHeight="550.0" prefWidth="1100.0">
+            <children>
+                <Label layoutX="570.0" layoutY="100.0" prefHeight="25.0" prefWidth="200.0" text="Licni podaci">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+                <GridPane layoutX="570.0" layoutY="145.0" prefWidth="430.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="129.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="348.0" minWidth="10.0" prefWidth="301.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Ime:" GridPane.rowIndex="0">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Prezime:" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Adresa:" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Telefon:" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Emain:" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="confirmPersonalInfoChangesButton" mnemonicParsing="false" onAction="#changePersonalInfo" prefHeight="25.0" prefWidth="140.0" text="POTVRDI" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <TextField fx:id="surname" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="address" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="phoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    </children>
+                </GridPane>
+                <Label layoutX="60.0" layoutY="100.0" prefHeight="45.0" prefWidth="247.0" text="Promeni lozinku">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+                <GridPane layoutX="60.0" layoutY="145.0" prefHeight="112.0" prefWidth="430.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="180.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="348.0" minWidth="10.0" prefWidth="250.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Stara lozinka:">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Nova lozinka:" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Potvrda nove lozinke:" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label GridPane.rowIndex="3">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="confirmPaswordChangesButton" mnemonicParsing="false" onAction="#changePassword" prefHeight="25.0" prefWidth="140.0" text="POTVRDI" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <PasswordField fx:id="newPassword" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="newPasswordConfirm" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <PasswordField fx:id="oldPassword" GridPane.columnIndex="1" />
+                    </children>
+                </GridPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

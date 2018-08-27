@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rs.ac.bg.etf.pkiproject.controller.ShoppingCartController">
+    <center>
+        <ScrollPane prefHeight="550.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+            <content>
+                <VBox fx:id="orderedFoodPane" prefHeight="470.0" prefWidth="1000.0" spacing="8.0" style="-fx-background-color: transparent;">
+                    <children>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+    <bottom>
+        <AnchorPane prefHeight="80.0" prefWidth="1100.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="973.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Otkazi" onAction="#cancelShopping"/>
+                <Button layoutX="851.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Zavrsi kupovinu" onAction="#showPaymentFormPopup"/>
+                <Label fx:id="totalPriceLabel" alignment="CENTER" layoutX="860.0" layoutY="10.0" prefHeight="17.0" prefWidth="221.0">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane prefHeight="50.0" prefWidth="1100.0" style="-fx-background-color: transparent" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rs.ac.bg.etf.pkiproject.controller.HeaderController">
+    <left>
+        <GridPane prefHeight="50.0" prefWidth="450.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button mnemonicParsing="false" onAction="#goToRestaurantsScene" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="RESTORANI" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#goToHomeScene" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="POCETNA" GridPane.columnIndex="0">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#goToPersonalInfo" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="MOJ PROFIL" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </GridPane>
+    </left>
+    <right>
+        <GridPane prefHeight="50.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints fx:id="cartColumn" hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" />
+                <ColumnConstraints fx:id="nameSurnameColumn" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="78" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button id="logoutButton" mnemonicParsing="false" onAction="#logout" text="Odjavi se" GridPane.columnIndex="2" />
+                <Label fx:id="userNameSurname" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button layoutX="36.0" layoutY="38.0" mnemonicParsing="false" onAction="#goToShoppingCart" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="file:resources/shopping-cart.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </GridPane>
+    </right>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <VBox.margin>
+        <Insets top="5.0" />
+    </VBox.margin>
+</BorderPane>
