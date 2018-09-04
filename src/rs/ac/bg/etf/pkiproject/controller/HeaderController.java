@@ -70,6 +70,13 @@ public class HeaderController {
     }
     
     @FXML
+    private void goToHistory() {
+        Session session = Context.getSession();
+        session.clearSession();
+        FxmlUtil.loadSceneFromFxmlFileOnPrimaryStage("/rs/ac/bg/etf/pkiproject/fxml/history_1.fxml");
+    }
+    
+    @FXML
     private void login() {
         String username = loginUsername.getText();
         String password = loginPassword.getText();

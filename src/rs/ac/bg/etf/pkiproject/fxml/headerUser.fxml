@@ -12,8 +12,9 @@
 
 <BorderPane prefHeight="50.0" prefWidth="1100.0" style="-fx-background-color: transparent" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rs.ac.bg.etf.pkiproject.controller.HeaderController">
     <left>
-        <GridPane prefHeight="50.0" prefWidth="450.0">
+        <GridPane prefHeight="50.0" prefWidth="600.0">
             <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
@@ -33,6 +34,11 @@
                     </font>
                 </Button>
                 <Button mnemonicParsing="false" onAction="#goToPersonalInfo" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="MOJ PROFIL" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#goToHistory" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="PORUDZBINE" GridPane.columnIndex="3">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>

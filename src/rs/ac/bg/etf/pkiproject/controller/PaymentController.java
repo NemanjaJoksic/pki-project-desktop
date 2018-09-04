@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import rs.ac.bg.etf.pkiproject.context.Context;
 import static rs.ac.bg.etf.pkiproject.context.Context.SHOPPING_CART_ATTR;
 import rs.ac.bg.etf.pkiproject.context.Session;
+import rs.ac.bg.etf.pkiproject.service.ShoppingService;
 import rs.ac.bg.etf.pkiproject.util.FxmlUtil;
 
 /**
@@ -20,11 +21,14 @@ import rs.ac.bg.etf.pkiproject.util.FxmlUtil;
  */
 public class PaymentController {
     
+    private ShoppingService shoppingService = new ShoppingService();
+    
     @FXML
     private AnchorPane paymantPane;
     
     @FXML
     private void pay() {
+        shoppingService.finishShopping();
         Session session = Context.getSession();
         session.clearSession();
         ((List)session.getAttribute(SHOPPING_CART_ATTR)).clear();

@@ -50,4 +50,8 @@ public class Queries {
                     + " FROM ORDERS o, ITEM i, HAS_FOOD hf, FOOD f, RESTAURANT r \n"
                     + "WHERE i.ID_O = o.ID AND i.ID_HF = hf.ID AND hf.ID_F = f.ID AND hf.ID_R = r.ID AND o.USERNAME = ?";
     
+    public static final String INSERT_ORDER = "INSERT INTO ORDERS VALUES(?, ?, ?, 'Aktivna')";
+
+    public static final String INSERT_ITEM = "INSERT INTO ITEM VALUES(?, ?, ?, ?)";
+    
 }

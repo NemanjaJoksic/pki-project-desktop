@@ -23,7 +23,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Context.getSession().addAttribute(Context.USERNAME_ATTR, "nemanja");
         Context.setPrimaryStage(stage);
-        FxmlUtil.loadSceneFromFxmlFileOnPrimaryStage("/rs/ac/bg/etf/pkiproject/fxml/history_1.fxml");
+        FxmlUtil.loadSceneFromFxmlFileOnPrimaryStage("/rs/ac/bg/etf/pkiproject/fxml/homeGuest.fxml");
     }
     
     /**

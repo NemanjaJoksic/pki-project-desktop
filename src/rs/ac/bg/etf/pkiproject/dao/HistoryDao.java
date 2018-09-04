@@ -13,8 +13,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import static rs.ac.bg.etf.pkiproject.dao.util.Fields.*;
 import static rs.ac.bg.etf.pkiproject.dao.util.Queries.GET_ORDERS_FOR_USER;
+import static rs.ac.bg.etf.pkiproject.dao.util.Queries.INSERT_ITEM;
+import static rs.ac.bg.etf.pkiproject.dao.util.Queries.INSERT_ORDER;
 import rs.ac.bg.etf.pkiproject.db.DB;
 import rs.ac.bg.etf.pkiproject.model.Food;
 import rs.ac.bg.etf.pkiproject.model.Item;
@@ -25,6 +28,28 @@ import rs.ac.bg.etf.pkiproject.model.Order;
  * @author Nemanja
  */
 public class HistoryDao {
+    
+    public String insertOrder(String username, double totalPrice) throws SQLException {
+        Connection connection = DB.getInstance().getConnection();
+        PreparedStatement ps = connection.prepareStatement(INSERT_ORDER);
+        String id = UUID.randomUUID().toString();
+        ps.setString(1, id);
+        ps.setString(2, username);
+        ps.setDouble(3, totalPrice);
+        ps.executeUpdate();
+        return id;
+    }
+
+    public void insertItem(String foodId, String orderId, int quantity) throws SQLException {
+        Connection connection = DB.getInstance().getConnection();
+        PreparedStatement ps = connection.prepareStatement(INSERT_ITEM);
+        String id = UUID.randomUUID().toString();
+        ps.setString(1, id);
+        ps.setString(2, foodId);
+        ps.setString(3, orderId);
+        ps.setInt(4, quantity);
+        ps.executeUpdate();
+    }
     
     public List<Order> getOrdersForUser(String username) {
         try {

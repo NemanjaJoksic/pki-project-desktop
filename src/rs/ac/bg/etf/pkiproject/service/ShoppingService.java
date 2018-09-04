@@ -5,10 +5,14 @@
  */
 package rs.ac.bg.etf.pkiproject.service;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.UUID;
 import rs.ac.bg.etf.pkiproject.context.Context;
 import static rs.ac.bg.etf.pkiproject.context.Context.SHOPPING_CART_ATTR;
+import static rs.ac.bg.etf.pkiproject.context.Context.USERNAME_ATTR;
+import rs.ac.bg.etf.pkiproject.context.Session;
+import rs.ac.bg.etf.pkiproject.dao.HistoryDao;
 import rs.ac.bg.etf.pkiproject.model.Food;
 import rs.ac.bg.etf.pkiproject.model.Item;
 
@@ -17,6 +21,8 @@ import rs.ac.bg.etf.pkiproject.model.Item;
  * @author Nemanja
  */
 public class ShoppingService {
+    
+    private final HistoryDao historyDao = new HistoryDao();
     
     public void addFoodToCart(Food food) {
         List<Item> shoppingCart = (List<Item>) Context.getSession().getAttribute(SHOPPING_CART_ATTR);
@@ -59,6 +65,28 @@ public class ShoppingService {
                 return;
             }
         }
+    }
+    
+    public void finishShopping() {
+        try {
+            Session session = Context.getSession();
+            String username = (String) session.getAttribute(USERNAME_ATTR);
+            List<Item> shoppingCart = (List<Item>) session.getAttribute(SHOPPING_CART_ATTR);
+            String orderId = historyDao.insertOrder(username, calculateTotalPrice(shoppingCart));
+            for(Item item : shoppingCart) {
+                historyDao.insertItem(item.getFood().getId(), orderId, item.getQuantity());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private double calculateTotalPrice(List<Item> shoppingCart) {
+        double totalPrice = 0.0;
+        for(Item item : shoppingCart) {
+            totalPrice += item.getPrice()*item.getQuantity();
+        }
+        return totalPrice;
     }
     
 }
