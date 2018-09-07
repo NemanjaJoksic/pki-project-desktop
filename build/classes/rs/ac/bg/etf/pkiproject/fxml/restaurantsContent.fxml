@@ -82,7 +82,7 @@
                         <TextField fx:id="maxRaiting" layoutX="107.0" layoutY="5.0" prefHeight="25.0" prefWidth="45.0" />
                     </children>
                 </AnchorPane>
-                <Label prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Nacin placanja:">
+                <Label prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Način plaćanja:">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -90,12 +90,12 @@
                 <ComboBox prefWidth="170.0" style="-fx-background-color: white;" value="">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="Gotovinsko placanje" />
-                            <String fx:value="Placanje karticom" />
+                            <String fx:value="Gotovinsko plaćanje" />
+                            <String fx:value="Plaćanje karticom" />
                         </FXCollections>
                     </items>
                 </ComboBox>
-                <Button id="searchRestaurantsButton" mnemonicParsing="false" onAction="#searchRestaurants" prefHeight="15.0" prefWidth="95.0" text="Pretrazi">
+                <Button id="searchRestaurantsButton" mnemonicParsing="false" onAction="#searchRestaurants" prefHeight="15.0" prefWidth="95.0" text="Pretraži">
                     <VBox.margin>
                         <Insets top="3.0" />
                     </VBox.margin>

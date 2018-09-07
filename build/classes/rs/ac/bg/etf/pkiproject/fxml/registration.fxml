@@ -33,7 +33,7 @@
                 <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label text="Korisnicko ime:">
+                <Label text="Korisničko ime:">
                     <font>
                         <Font size="18.0" />
                     </font>

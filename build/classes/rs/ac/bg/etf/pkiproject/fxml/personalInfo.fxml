@@ -15,7 +15,7 @@
         <fx:include fx:id="header" source="headerUser.fxml" />
         <AnchorPane prefHeight="550.0" prefWidth="1100.0">
             <children>
-                <Label layoutX="570.0" layoutY="100.0" prefHeight="25.0" prefWidth="200.0" text="Licni podaci">
+                <Label layoutX="570.0" layoutY="100.0" prefHeight="25.0" prefWidth="200.0" text="Lični podaci">
                     <font>
                         <Font name="System Bold" size="30.0" />
                     </font>
