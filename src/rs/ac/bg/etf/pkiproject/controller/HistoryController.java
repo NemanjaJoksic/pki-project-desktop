@@ -18,11 +18,11 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import rs.ac.bg.etf.pkiproject.context.Context;
-import static rs.ac.bg.etf.pkiproject.context.Context.PICTURE_PATH_TEMPLATE;
 import static rs.ac.bg.etf.pkiproject.context.Context.USERNAME_ATTR;
 import rs.ac.bg.etf.pkiproject.model.Item;
 import rs.ac.bg.etf.pkiproject.model.Order;
 import rs.ac.bg.etf.pkiproject.service.HistoryService;
+import static rs.ac.bg.etf.pkiproject.context.Context.RESTAURANT_PICTURE_PATH_TEMPLATE;
 
 /**
  *
@@ -57,7 +57,7 @@ public class HistoryController {
         restaurantPicture.setLayoutY(7);
         restaurantPicture.setPickOnBounds(true);
         restaurantPicture.setPreserveRatio(true);
-        restaurantPicture.setImage(new Image(PICTURE_PATH_TEMPLATE.replaceAll("#NAME", order.getRestaurantName().toLowerCase().replaceAll(" ", "-"))));
+        restaurantPicture.setImage(new Image(RESTAURANT_PICTURE_PATH_TEMPLATE.replaceAll("#NAME", order.getRestaurantName().toLowerCase().replaceAll(" ", "-"))));
         anchorPane.getChildren().add(restaurantPicture);
         
         /*

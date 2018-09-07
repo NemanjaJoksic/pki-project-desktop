@@ -5,7 +5,8 @@
  */
 package rs.ac.bg.etf.pkiproject.model;
 
-import static rs.ac.bg.etf.pkiproject.context.Context.PICTURE_PATH_TEMPLATE;
+import static rs.ac.bg.etf.pkiproject.context.Context.FOOD_PICTURE_PATH_TEMPLATE;
+import static rs.ac.bg.etf.pkiproject.context.Context.RESTAURANT_PICTURE_PATH_TEMPLATE;
 
 /**
  *
@@ -26,7 +27,7 @@ public class Food {
     public Food(String name, String desc) {
         this.name = name;
         this.desc = desc;
-        this.picturePath = PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
+        this.picturePath = FOOD_PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
     }
 
     public Food(String id, String name, String desc, double price) {
@@ -34,7 +35,7 @@ public class Food {
         this.name = name;
         this.desc = desc;
         this.price = price;
-        this.picturePath = PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
+        this.picturePath = FOOD_PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
     }
 
     public String getId() {
@@ -62,7 +63,7 @@ public class Food {
     }
 
     public String getPicturePath() {
-        return PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
+        return FOOD_PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
     }
 
     public void setPicturePath(String picturePath) {

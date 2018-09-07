@@ -21,16 +21,17 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="RESTORANI" GridPane.columnIndex="1" onAction="#goToRestaurantsScene">
+                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: transparent" text="POČETNA" GridPane.columnIndex="0" onAction="#goToHomeScene">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="POČETNA" GridPane.columnIndex="0" onAction="#goToHomeScene">
+                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: transparent" text="RESTORANI" GridPane.columnIndex="1" onAction="#goToRestaurantsScene">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Button>
+                
             </children>
         </GridPane>
     </left>

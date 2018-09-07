@@ -5,7 +5,7 @@
  */
 package rs.ac.bg.etf.pkiproject.model;
 
-import static rs.ac.bg.etf.pkiproject.context.Context.PICTURE_PATH_TEMPLATE;
+import static rs.ac.bg.etf.pkiproject.context.Context.RESTAURANT_PICTURE_PATH_TEMPLATE;
 
 /**
  *
@@ -81,7 +81,7 @@ public class Restaurant {
     }
 
     public String getPicturePath() {
-        return PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
+        return RESTAURANT_PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
     }
 
     public void setPicturePath(String picturePath) {

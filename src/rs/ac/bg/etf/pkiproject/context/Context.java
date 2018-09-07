@@ -16,7 +16,8 @@ import rs.ac.bg.etf.pkiproject.model.Item;
  */
 public class Context {
     
-    public static final String PICTURE_PATH_TEMPLATE = "file:resources/#NAME.jpg";
+    public static final String RESTAURANT_PICTURE_PATH_TEMPLATE = "file:resources/restaurants/#NAME.jpg";
+    public static final String FOOD_PICTURE_PATH_TEMPLATE = "file:resources/food/#NAME.jpg";
     
     public static final String USERNAME_ATTR = "username";
     public static final String RESTAURANT_ATTR = "restaurantName";
