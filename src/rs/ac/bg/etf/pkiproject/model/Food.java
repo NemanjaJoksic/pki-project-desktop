@@ -5,6 +5,8 @@
  */
 package rs.ac.bg.etf.pkiproject.model;
 
+import static rs.ac.bg.etf.pkiproject.context.Context.PICTURE_PATH_TEMPLATE;
+
 /**
  *
  * @author Nemanja
@@ -14,6 +16,7 @@ public class Food {
     private String id;
     private String name;
     private String desc;
+    private String picturePath;
     private double price;
     
     public Food() {
@@ -23,6 +26,7 @@ public class Food {
     public Food(String name, String desc) {
         this.name = name;
         this.desc = desc;
+        this.picturePath = PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
     }
 
     public Food(String id, String name, String desc, double price) {
@@ -30,6 +34,7 @@ public class Food {
         this.name = name;
         this.desc = desc;
         this.price = price;
+        this.picturePath = PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
     }
 
     public String getId() {
@@ -54,6 +59,14 @@ public class Food {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public String getPicturePath() {
+        return PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
+    }
+
+    public void setPicturePath(String picturePath) {
+        this.picturePath = picturePath;
     }
 
     public double getPrice() {

@@ -5,12 +5,8 @@
  */
 package rs.ac.bg.etf.pkiproject.context;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 import rs.ac.bg.etf.pkiproject.model.Item;
 
@@ -19,6 +15,8 @@ import rs.ac.bg.etf.pkiproject.model.Item;
  * @author Nemanja
  */
 public class Context {
+    
+    public static final String PICTURE_PATH_TEMPLATE = "file:resources/#NAME.jpg";
     
     public static final String USERNAME_ATTR = "username";
     public static final String RESTAURANT_ATTR = "restaurantName";

@@ -38,6 +38,7 @@ public class CommentController {
     private Restaurant restaurant = null;
     private Food food = null;
     private String name;
+    private String picturePath;
 
     @FXML
     private TextArea comment;
@@ -75,9 +76,11 @@ public class CommentController {
         Session session = Context.getSession();
         if ((restaurant = (Restaurant) session.getAttribute(RESTAURANT_ATTR)) != null) {
             name = restaurant.getName() + ", " + restaurant.getAddress() + ", " + restaurant.getLocation();
+            picturePath = restaurant.getPicturePath();
             allComments = restaurantService.getCommentsForRestaurant(restaurant.getId());
         } else if ((food = (Food) session.getAttribute(FOOD_ATTR)) != null) {
             name = food.getName();
+            picturePath = food.getPicturePath();
             allComments = foodService.getCommentsForFood(food.getId());
         } else {
             return;
@@ -95,7 +98,7 @@ public class CommentController {
         *   Add restaurant name and image
          */
         nameLabel.setText(name);
-        imageView.setImage(new Image("file:resources/meals.jpg"));
+        imageView.setImage(new Image(picturePath));
 
         /*
         *   Add all comments on pain

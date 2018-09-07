@@ -5,6 +5,8 @@
  */
 package rs.ac.bg.etf.pkiproject.model;
 
+import static rs.ac.bg.etf.pkiproject.context.Context.PICTURE_PATH_TEMPLATE;
+
 /**
  *
  * @author Nemanja
@@ -17,6 +19,7 @@ public class Restaurant {
     private String desc;
     private String address;
     private String location;
+    private String picturePath;
 
     public Restaurant() {
         
@@ -75,6 +78,14 @@ public class Restaurant {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getPicturePath() {
+        return PICTURE_PATH_TEMPLATE.replaceAll("#NAME", name.toLowerCase().replaceAll(" ", "-"));
+    }
+
+    public void setPicturePath(String picturePath) {
+        this.picturePath = picturePath;
     }
     
 }

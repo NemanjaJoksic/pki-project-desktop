@@ -98,8 +98,8 @@ public class FoodController {
         imageView.setLayoutY(1);
         imageView.setPickOnBounds(true);
         imageView.setPreserveRatio(true);
-//        imageView.setImage(new Image("file:resources/" + food.getName() + ".jpg"));
-        imageView.setImage(new Image("file:resources/meals.jpg"));
+        imageView.setImage(new Image(food.getPicturePath()));
+//        imageView.setImage(new Image("file:resources/meals.jpg"));
         anchorPane.getChildren().add(imageView);
 
         /*

@@ -90,8 +90,8 @@ public class RestaurantController {
         imageView.setLayoutY(1);
         imageView.setPickOnBounds(true);
         imageView.setPreserveRatio(true);
-//        imageView.setImage(new Image("file:resources/" + food.getName() + ".jpg"));
-        imageView.setImage(new Image("file:resources/meals.jpg"));
+        imageView.setImage(new Image(restaurant.getPicturePath()));
+//        imageView.setImage(new Image("file:resources/meals.jpg"));
         anchorPane.getChildren().add(imageView);
 
         /*
@@ -99,7 +99,7 @@ public class RestaurantController {
          */
         Hyperlink nameLink = new Hyperlink();
         nameLink.setLayoutX(98);
-        nameLink.setLayoutY(2);
+        nameLink.setLayoutY(-5);
         nameLink.setText(restaurant.getName() + ", " + restaurant.getAddress() + ", " + restaurant.getLocation());
         nameLink.setFont(new Font("System Bold", 16));
         nameLink.setOnAction((ActionEvent e) -> {
@@ -118,7 +118,7 @@ public class RestaurantController {
          */
         Label raitingLabel = new Label();
         raitingLabel.setLayoutX(874);
-        raitingLabel.setLayoutY(6);
+        raitingLabel.setLayoutY(-1);
         raitingLabel.setText(String.valueOf(restaurant.getRaiting()));
         raitingLabel.setFont(new Font(16));
         anchorPane.getChildren().add(raitingLabel);
@@ -129,7 +129,7 @@ public class RestaurantController {
         Label descLabel = new Label();
         descLabel.setAlignment(Pos.TOP_LEFT);
         descLabel.setLayoutX(101);
-        descLabel.setLayoutY(35);
+        descLabel.setLayoutY(26);
         descLabel.setPrefHeight(49);
         descLabel.setPrefWidth(806);
         descLabel.setWrapText(true);
